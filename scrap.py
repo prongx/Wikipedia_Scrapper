@@ -70,7 +70,7 @@ def get_leaders():
     return(leaders_per_country)
 
 def save(leaders_per_country):
-    json_object = json.dumps(leaders_per_country, indent = 4)
+    json_object = json.dumps(leaders_per_country, ensure_ascii=False, indent = 4)
     with open("./output.txt","w") as outputfile:
         outputfile.write(json_object)
 
